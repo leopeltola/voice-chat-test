@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 		#push_warning("Received packets has values though they should be ")
 
 
-@rpc("any_peer", "call_remote")
+@rpc("any_peer", "call_remote", "unreliable")
 func transmit(packet: PackedByteArray) -> void:
 	#push_warning("Received packet from transmit")
 	received_packets.append(packet)
