@@ -1,0 +1,26 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://6djgbeef5ytb"]
+
+[sub_resource type="AudioEffectOpusChunked" id="AudioEffectOpusChunked_j3pel"]
+resource_name = "OpusChunked"
+
+[resource]
+bus/1/name = &"Deadend"
+bus/1/solo = false
+bus/1/mute = true
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0672607
+bus/1/send = &""
+bus/2/name = &"Microphone"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 6.02
+bus/2/send = &"Deadend"
+bus/2/effect/0/effect = SubResource("AudioEffectOpusChunked_j3pel")
+bus/2/effect/0/enabled = true
+bus/3/name = &"RemoteMic"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 3.44026
+bus/3/send = &"Master"
