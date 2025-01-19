@@ -9,6 +9,7 @@ var _connected := false
 
 
 func _ready() -> void:
+	remote_audio.stream = AudioStreamOpusChunked.new()
 	%JoinButton.pressed.connect(func():
 		var peer = ENetMultiplayerPeer.new()
 		var err := peer.create_client(
@@ -38,7 +39,6 @@ func _ready() -> void:
 	)
 	var microphone_id := AudioServer.get_bus_index("Microphone")
 	opus = AudioServer.get_bus_effect(microphone_id, 0)
-	remote_audio.stream = AudioEffectOpusChunked.new()
 
 
 func _process(delta: float) -> void:
