@@ -5,6 +5,7 @@
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_kjv5x"]
 
 [sub_resource type="AudioStreamOpusChunked" id="AudioStreamOpusChunked_sye21"]
+mix_rate = 48000
 
 [node name="VoiceChatTest" type="Control"]
 layout_mode = 3
@@ -22,7 +23,6 @@ bus = &"Microphone"
 
 [node name="RemoteAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamOpusChunked_sye21")
-volume_db = 7.298
 autoplay = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

@@ -47,6 +47,8 @@ func _process(delta: float) -> void:
 	var prepend = PackedByteArray()
 	while opus.chunk_available():
 		var opus_packet: PackedByteArray = opus.read_opus_packet(prepend)
+		if opus_packet.is_empty():
+			continue
 		opus.drop_chunk()
 		#push_warning("Transmitted packet!")
 		transmit.rpc(opus_packet)
