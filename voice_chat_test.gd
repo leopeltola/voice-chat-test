@@ -38,6 +38,7 @@ func _ready() -> void:
 	)
 	var microphone_id := AudioServer.get_bus_index("Microphone")
 	opus = AudioServer.get_bus_effect(microphone_id, 0)
+	remote_audio.stream = AudioEffectOpusChunked.new()
 
 
 func _process(delta: float) -> void:

@@ -5,7 +5,6 @@
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_kjv5x"]
 
 [sub_resource type="AudioStreamOpusChunked" id="AudioStreamOpusChunked_sye21"]
-mix_rate = 48000
 
 [node name="VoiceChatTest" type="Control"]
 layout_mode = 3
