@@ -9,7 +9,6 @@ var _connected := false
 
 
 func _ready() -> void:
-	remote_audio.stream = AudioStreamOpusChunked.new()
 	%JoinButton.pressed.connect(func():
 		var peer = ENetMultiplayerPeer.new()
 		var err := peer.create_client(
